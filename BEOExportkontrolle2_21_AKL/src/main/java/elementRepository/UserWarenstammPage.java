@@ -19,6 +19,7 @@ public class UserWarenstammPage {
 	GeneralUtilities gu = new GeneralUtilities();
 	ExcelUtilities eu = new ExcelUtilities();
 	WaitUtilities wu = new WaitUtilities();
+	
 	String warenstammName;
 
 	public UserWarenstammPage(WebDriver driver) {
