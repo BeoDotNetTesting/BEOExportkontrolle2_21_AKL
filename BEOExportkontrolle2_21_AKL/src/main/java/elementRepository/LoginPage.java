@@ -26,6 +26,7 @@ public class LoginPage {
 	WebElement logInErrorMessage;
 	@FindBy(xpath = "//h2[text()='Anmelden']")
 	WebElement registerText;
+	
 
 	public void sendUserName(String userNAmeValue) {
 		userName.sendKeys(userNAmeValue);

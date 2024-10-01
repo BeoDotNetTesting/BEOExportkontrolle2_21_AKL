@@ -21,6 +21,7 @@ public class UserMasterLoginPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
 
 	@FindBy(xpath = "//div//ul//li[text()='BEO India Test']")
 	WebElement beoIndiaTestFromDrop;

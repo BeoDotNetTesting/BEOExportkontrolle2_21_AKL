@@ -22,6 +22,7 @@ public class UserGenehmigungsVerWaltungPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
 	@FindBy(xpath="//table[@id='tbl_GenemigungArtikels']//tbody//tr")
 	List<WebElement> genemigungArtikelsList;
 	@FindBy(xpath="//span[text()='Hinzufügen']")

@@ -22,6 +22,7 @@ public class UserGenehmigungenPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
 
 	@FindBy(xpath = "//span[text()='Hinzufügen']")
 	WebElement genehmigungenAddButton;

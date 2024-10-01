@@ -26,6 +26,7 @@ public class UserArtikelstammPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
 
 	@FindBy(xpath = "//div[@class='tool-icon']//span[2]") // span[text()='Hinzufügen']
 	WebElement newArtikelHinzufugenButton;
