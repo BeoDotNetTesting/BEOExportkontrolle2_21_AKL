@@ -23,7 +23,6 @@ public class UserGenehmigungenPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-
 	@FindBy(xpath = "//span[text()='Hinzufügen']")
 	WebElement genehmigungenAddButton;
 	@FindBy(xpath = "//table[@id='tbl_GenemigungArtikels']//tbody//tr")

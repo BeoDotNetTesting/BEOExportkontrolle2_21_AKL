@@ -20,8 +20,7 @@ public class UserMasterLoginPage {
 	public UserMasterLoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-	}
-	
+	}	
 
 	@FindBy(xpath = "//div//ul//li[text()='BEO India Test']")
 	WebElement beoIndiaTestFromDrop;

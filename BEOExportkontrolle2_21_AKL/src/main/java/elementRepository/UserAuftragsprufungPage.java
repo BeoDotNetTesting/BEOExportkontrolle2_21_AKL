@@ -22,8 +22,7 @@ public class UserAuftragsprufungPage {
 	public UserAuftragsprufungPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-	}
-	
+	}	
 
 	@FindBy(xpath="//span[text()='Erstellen']")
 	WebElement erstellenButton;

@@ -22,8 +22,7 @@ public class UserEmbargoGeneralPage {
 	public UserEmbargoGeneralPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-	}
-	
+	}	
 
 //	@FindBy(xpath = "//div[@class='container-fluid']//ul//li[7]//a")
 //	WebElement embargoButton;
