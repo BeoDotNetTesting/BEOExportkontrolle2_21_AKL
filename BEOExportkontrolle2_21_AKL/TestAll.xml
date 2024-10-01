@@ -1,0 +1,20 @@
+
+<suite name="ExportKontrolle" parallel="tests" thread-count="1">
+	<test name="ChromeTest">
+		<listeners>
+			<listener class-name="utilities.RetryListener" />
+			<listener class-name="utilities.ExtenetReport" />
+		</listeners>
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="testCase.LoginPageTest"></class>
+			<class name="testCase.UserWarenstammPageTest"></class>
+			<class name="testCase.UserMasterLoginPageTest"></class>
+			<class name="testCase.UserArtikelstammPageTest"></class>
+			<class name="testCase.UserArtikelstammAddOrEditPageTest"></class>
+			<class name="testCase.UserEmbargoGeneralPageTest"></class>
+			<class name="testCase.UserEmbargoGeneralEditPageTest"></class>
+			<class name="testCase.UserAuftragsprufungPageTest"></class>
+		</classes>
+	</test>
+</suite>
