@@ -61,7 +61,7 @@ public class UserArtikelstammPage {
 	List<WebElement> artikelstammPaginationCount;
 
 	public void clickOnNewArtikelHinzufugenButton() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(16000);
 		newArtikelHinzufugenButton.click();
 		Thread.sleep(2500);
 	}
@@ -111,8 +111,10 @@ public class UserArtikelstammPage {
 		addArtikelButton.click();
 	}
 
-	public void clickOnZuruckButton() {
+	public void clickOnZuruckButton() throws InterruptedException {
+		Thread.sleep(2000);
 		zuruckButton.click();
+		Thread.sleep(2000);
 	}
 
 	public void waitForZuruckButtonClick() {
@@ -180,11 +182,14 @@ public class UserArtikelstammPage {
 		deleteButton.click();
 	}
 
-	public String getArtikelstammTableElementText(int column, int row) {
+	public String getArtikelstammTableElementText(int column, int row) throws InterruptedException {
+		Thread.sleep(2000);
 		String artikelstammTableElementPath = "//table[@id='Scroll_tbl_Artikelstam']//tbody//tr[" + (column + 1)
 				+ "]//td[" + (row + 1) + "]";
 		WebElement artikelstammTableElement = driver.findElement(By.xpath(artikelstammTableElementPath));
+		Thread.sleep(2000);
 		return artikelstammTableElement.getText();
+		
 	}
 
 	public String readArtikelDeletePopup() {

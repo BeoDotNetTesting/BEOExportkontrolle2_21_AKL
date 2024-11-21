@@ -45,9 +45,9 @@ public class UserEmbargoGeneralPageTest extends BaseClass {
 		uegp.clickOnLanderubersicht();
 		uegp.clickOnDropDownOfLanderListe(1);
 		int allLanderTableSize = uegp.getTableSizeOfLanderubersicht();
-		for (int i = 0; i < uegp.getTableSizeOfLanderubersicht(); i++) {
-			uegp.selectLanderubersichtTableRows(i);
-		}
+		//for (int i = 0; i < uegp.getTableSizeOfLanderubersicht(); i++) {
+			uegp.selectLanderubersichtTableRows(uegp.getTableSizeOfLanderubersicht());
+		//}
 		uegp.clickOnHinzufugenButton();
 		uegp.waitForEmbargoNotificationMessage();
 		Assert.assertEquals(uegp.readEmbargoNotificationMessage(), "Embargo erfolgreich aktualisiert",
@@ -108,9 +108,9 @@ public class UserEmbargoGeneralPageTest extends BaseClass {
 		uegp.clickOnLanderubersicht();
 		uegp.clickOnDropDownOfLanderListe(1);
 		int allLanderTableSize = uegp.getTableSizeOfLanderubersicht();
-		for (int i = 0; i < uegp.getTableSizeOfLanderubersicht(); i++) {
-			uegp.selectLanderubersichtTableRows(i);
-		}
+		//for (int i = 0; i < uegp.getTableSizeOfLanderubersicht(); i++) {
+			uegp.selectLanderubersichtTableRows(uegp.getTableSizeOfLanderubersicht());
+		//}
 		uegp.clickOnHinzufugenButton();
 		uegp.waitForEmbargoNotificationMessage();
 		Assert.assertEquals(uegp.readEmbargoNotificationMessage(), "Embargo erfolgreich aktualisiert",

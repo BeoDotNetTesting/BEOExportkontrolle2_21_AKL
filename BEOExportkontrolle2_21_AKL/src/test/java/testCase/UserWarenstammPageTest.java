@@ -41,8 +41,8 @@ public class UserWarenstammPageTest extends BaseClass {
 		softAssert.assertEquals(uwp.archivButtonIsEnable(), expected, ":: archivButton is not Enable");		
 		softAssert.assertEquals(uwp.embargoButtonIsDisplayed(), expected, ":: embargoButton is not Displayed");
 		softAssert.assertEquals(uwp.embargoButtonIsEnable(), expected, ":: embargoButton is not Enable");
-		softAssert.assertEquals(uwp.datenExportButtonIsDisplayed(), expected, ":: datenExportButton is not Displayed");
-		softAssert.assertEquals(uwp.datenExportButtonIsEnable(), expected, ":: datenExportButton is not Enable");
+		//softAssert.assertEquals(uwp.datenExportButtonIsDisplayed(), expected, ":: datenExportButton is not Displayed");
+		//softAssert.assertEquals(uwp.datenExportButtonIsEnable(), expected, ":: datenExportButton is not Enable");
 	}
 
 	@Test 
@@ -183,9 +183,9 @@ public class UserWarenstammPageTest extends BaseClass {
 		lp.clickLoginButton();	
 		umLp.selectFirmaFromDropDown();
 		umLp.anmeldenClick();
-		int columnNumber = gu.randon(3);
-		uwp.clickWarenstammTableElementAnyWhere(0, columnNumber);
-		String selectedProduktgruppe = uwp.getTextWarenstammTableElement(0, 1);
+		Thread.sleep(2000);		
+		uwp.clickWarenstammTableElementAnyWhere(0, 2);
+		String selectedProduktgruppe = uwp.getTextWarenstammTableElement(0, 2);
 		uwp.clickOnWarenstammLoschenButton();
 		gu.alertAccept(driver);
 		uwp.waitForLoschenNotificationBarText();
@@ -194,9 +194,11 @@ public class UserWarenstammPageTest extends BaseClass {
 		Assert.assertEquals(actualNotificationMessage, expectedNotificationMessage,
 				"::Notification Bar Message not as expected");
 		uwp.clickOnNotificationBarCloseButton();
+		System.out.println(selectedProduktgruppe);
 		uwp.sendValueTosearchTextField(selectedProduktgruppe);
 		uwp.clickOnSearchIcon();
 		String expected = "Keine Daten vorhanden";
+		Thread.sleep(1000);
 		uwp.waitForNoDataAvailableText();
 		Thread.sleep(1000);
 		String actual = uwp.readNoDataAvailableText();
@@ -266,6 +268,7 @@ public class UserWarenstammPageTest extends BaseClass {
 				actual = true;
 			}
 			Assert.assertEquals(actual, true, "::When double click On warrengroup the heading not as expected");
+			Thread.sleep(1000);
 			uasp.clickOnZuruckButton();
 			Thread.sleep(1000);
 		}

@@ -25,6 +25,7 @@ public class UserArtikelstammAddOrEditPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}	
+	
 
 	@FindBy(xpath = "//div[text()='Ausfuhrlisten']")
 	WebElement ausfuhrlistenTab;

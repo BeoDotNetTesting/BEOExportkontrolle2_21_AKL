@@ -296,6 +296,7 @@ public class UserArtikelstammPageTest extends BaseClass {
 			if (uwp.getCountOfNumberOfArtikelInWarenstamm(j) != "0") {
 				uwp.doubleClickWarenstammTableElementAnyWhere(j, 2);
 				for (int i = 0; i < 7; i++) {
+					Thread.sleep(1000);
 					String artikelnummerFromTable = uasp.getArtikelstammTableElementText(i, 1);
 					Thread.sleep(1000);
 					uasp.doubleClickArtikelstammTableElementAnyWhere(i, i);
